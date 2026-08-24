@@ -16,7 +16,6 @@ bolt them on.
 |---|---|
 | `worlds/terratech/` | The Archipelago world: items, locations, logic, options, client |
 | `mod/TerraTechArchipelago/` | The game mod (C#, Harmony) |
-| `dist/` | The built `terratech.apworld` and mod zip |
 
 ## Building it yourself
 
@@ -25,6 +24,8 @@ The mod:
 ```
 dotnet build mod/TerraTechArchipelago -c Release
 ```
+
+Both are attached to every [release](https://github.com/solida1987/TerraTech-Archipelago/releases) already built.
 
 The world is plain Python — zip `worlds/terratech/` as `terratech.apworld`
 with the folder inside it.
