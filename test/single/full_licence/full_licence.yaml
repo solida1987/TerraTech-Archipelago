@@ -1,0 +1,21 @@
+name: full_licence
+game: TerraTech
+description: stress case full_licence
+
+TerraTech:
+  progression_balancing: 0
+  accessibility: items
+  goal: licence_master
+  corporations_to_max: 3
+  collector_percentage: 40
+  ap_cores_required: 5
+  block_pool: full
+  pickup_checks: true
+  attach_checks: true
+  shop_checks: 500
+  enemy_checks: 800
+  crate_checks: 100
+  quest_checks: true
+  mission_checks: true
+  trap_percentage: 0
+  death_link: false

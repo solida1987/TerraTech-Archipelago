@@ -1,0 +1,21 @@
+name: minimal
+game: TerraTech
+description: stress case minimal
+
+TerraTech:
+  progression_balancing: 0
+  accessibility: items
+  goal: licence_master
+  corporations_to_max: 1
+  collector_percentage: 40
+  ap_cores_required: 5
+  block_pool: starter
+  pickup_checks: false
+  attach_checks: false
+  shop_checks: 0
+  enemy_checks: 0
+  crate_checks: 0
+  quest_checks: true
+  mission_checks: false
+  trap_percentage: 0
+  death_link: false

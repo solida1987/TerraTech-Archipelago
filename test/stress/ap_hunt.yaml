@@ -1,0 +1,21 @@
+name: ap_hunt
+game: TerraTech
+description: stress case ap_hunt
+
+TerraTech:
+  progression_balancing: 0
+  accessibility: items
+  goal: ap_hunt
+  corporations_to_max: 1
+  collector_percentage: 40
+  ap_cores_required: 5
+  block_pool: starter
+  pickup_checks: true
+  attach_checks: true
+  shop_checks: 40
+  enemy_checks: 60
+  crate_checks: 10
+  quest_checks: true
+  mission_checks: false
+  trap_percentage: 40
+  death_link: false

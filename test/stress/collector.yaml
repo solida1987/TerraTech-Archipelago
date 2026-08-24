@@ -1,0 +1,21 @@
+name: collector
+game: TerraTech
+description: stress case collector
+
+TerraTech:
+  progression_balancing: 0
+  accessibility: items
+  goal: collector
+  corporations_to_max: 1
+  collector_percentage: 40
+  ap_cores_required: 5
+  block_pool: standard
+  pickup_checks: true
+  attach_checks: false
+  shop_checks: 100
+  enemy_checks: 200
+  crate_checks: 30
+  quest_checks: true
+  mission_checks: true
+  trap_percentage: 15
+  death_link: false
