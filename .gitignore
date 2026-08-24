@@ -1,7 +1,4 @@
 bin/
 obj/
-dist/
-test/out*/
-test/single/*/out/
 __pycache__/
 *.pyc

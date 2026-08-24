@@ -14,30 +14,25 @@ bolt them on.
 
 | Path | What it is |
 |---|---|
-| `worlds/terratech/` | The apworld: items, locations, logic, options, client |
+| `worlds/terratech/` | The Archipelago world: items, locations, logic, options, client |
 | `mod/TerraTechArchipelago/` | The game mod (C#, Harmony) |
-| `tools/` | The generators that build the block table from the game's own data |
-| `test/` | Generation test cases |
+| `dist/` | The built `terratech.apworld` and mod zip |
 
-## Building
+## Building it yourself
 
-The apworld needs nothing but Python:
-
-```
-py -3.13 tools/generate_block_table.py
-py -3.13 tools/build_apworld.py
-```
-
-The mod needs the .NET SDK:
+The mod:
 
 ```
 dotnet build mod/TerraTechArchipelago -c Release
 ```
 
+The world is plain Python — zip `worlds/terratech/` as `terratech.apworld`
+with the folder inside it.
+
 **No part of TerraTech is redistributed here.** The mod resolves everything it
-needs from the game by name at runtime, so this repository builds from a clean
-clone without a copy of the game's assemblies. The block table is generated
-from the game's own `BlockTypes` enum on the machine that has it installed.
+needs from the game by name at runtime (`mod/TerraTechArchipelago/Reflect.cs`),
+so this repository builds from a clean clone without a copy of the game's
+assemblies.
 
 ## How it works
 
@@ -52,11 +47,19 @@ chokepoint nothing can route around.
 
 ## Credits
 
-- The world, the mod and this repository: **solida1987**
-- TerraTech is by **Payload Studios** and is not affiliated with this project
-- Built on [Archipelago](https://github.com/ArchipelagoMW/Archipelago) (MIT)
-  and [Harmony](https://github.com/pardeike/Harmony) (MIT)
+- The Archipelago world, the game mod and this repository: **solida1987**
+- **TerraTech** is by [Payload Studios](https://payloadstudios.com/). This
+  project is not affiliated with them, and nothing of theirs ships here.
+- [Archipelago](https://github.com/ArchipelagoMW/Archipelago) — MIT
+- [Harmony](https://github.com/pardeike/Harmony) by Andreas Pardeike — MIT
+
+## Before you install
+
+Please read the **[disclaimer](DISCLAIMER.md)**. The short version: this is a
+fan project, you need your own copy of the game, the mod changes a running
+game in memory and nothing on disk, and it may break when TerraTech updates —
+in which case it turns itself off and says so.
 
 ## Licence
 
-MIT — see [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE) and [NOTICE](NOTICE).

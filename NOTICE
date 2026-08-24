@@ -1,0 +1,43 @@
+TerraTech Archipelago
+Copyright 2026 Marco Jonas Christiansen (solida1987)
+
+This project's own source code -- the Archipelago world, the game mod and the
+tools that build them -- is licensed under the MIT License (see LICENSE).
+
+
+WHAT IS NOT OURS
+----------------
+TerraTech is the property of Payload Studios. Nothing belonging to Payload
+Studios ships with this project: no game files, no assets, no code. The mod
+resolves everything it needs from the copy of the game you already own, by
+name, at the moment it runs. If you do not own TerraTech, this project gives
+you nothing.
+
+Neither Payload Studios nor Archipelago endorses this project, and neither
+should be contacted about it. Bugs belong here.
+
+
+INDEPENDENT COMPONENTS
+----------------------
+This project is distributed together with one independent open-source
+component, which remains under its own licence and copyright. It is NOT
+licensed under our MIT licence, and nothing in LICENSE grants any right
+over it:
+
+  Harmony ............... MIT              (c) 2017 Andreas Pardeike
+
+Harmony is what makes a mod possible for a game with no official modding API.
+It rewrites methods in memory at runtime; it changes no file on disk and
+touches nothing in your TerraTech installation.
+
+The Archipelago protocol and its Python client library are by the Archipelago
+project, MIT licensed. This world plugs into Archipelago; it does not include
+or modify it.
+
+
+THE BLOCK TABLE
+---------------
+The list of block names this world shuffles is read from your own installed
+copy of TerraTech, on your machine, by a tool in this repository. The names
+are facts about the game, not content copied from it -- no block data, model,
+texture or string belonging to Payload Studios is stored here.
