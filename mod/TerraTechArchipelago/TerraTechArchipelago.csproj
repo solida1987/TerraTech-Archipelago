@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- The game runs Mono on .NET Framework 4.x. net472 is what its own
+         assemblies target, so this is what a mod must target to load. -->
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>TerraTechArchipelago</AssemblyName>
+    <RootNamespace>TerraTechArchipelago</RootNamespace>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <AssemblyVersion>0.1.11.0</AssemblyVersion>
+    <FileVersion>0.1.11.0</FileVersion>
+    <Version>0.1.11</Version>
+    <Company>solida1987</Company>
+    <Product>TerraTech Archipelago</Product>
+    <!-- The game's assemblies are NOT redistributed with this repository.
+         Everything the mod needs from TerraTech is resolved by name at
+         runtime (see Reflect.cs), so a clone builds without owning a copy
+         of the game's code. -->
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Harmony patches the game; BepInEx is the loader that gets us into the
+         process at all (vanilla TerraTech loads no third-party code by
+         itself — measured: zero references to QMods in Assembly-CSharp).
+         Both are compile-time references only; at runtime the game's BepInEx
+         install provides them, downloaded separately by the player or their
+         launcher from BepInEx's own releases. -->
+    <PackageReference Include="Lib.Harmony" Version="2.2.2" />
+    <PackageReference Include="BepInEx.Core" Version="5.4.21" IncludeAssets="compile" />
+    <PackageReference Include="UnityEngine.Modules" Version="2018.4.13" IncludeAssets="compile" />
+  </ItemGroup>
+
+</Project>

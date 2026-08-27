@@ -1,0 +1,9 @@
+{
+  "game": "TerraTech",
+  "world_version": "0.3.0",
+  "minimum_ap_version": "0.5.0",
+  "version": 7,
+  "compatible_version": 7,
+  "authors": ["solida1987"],
+  "repo_url": "https://github.com/solida1987/TerraTech-Archipelago"
+}
